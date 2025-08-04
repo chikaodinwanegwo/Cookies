@@ -12,3 +12,12 @@ const PORT = process.env.PORT || 4001;
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
+
+//session
+app.use(
+  session({
+    secret: "D53gxl41G",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
